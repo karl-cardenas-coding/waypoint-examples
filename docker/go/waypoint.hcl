@@ -1,5 +1,14 @@
 project = "example-go"
 
+runner {
+  enabled = true
+
+  data_source "git" {
+    url  = "https://github.com/karl-cardenas-coding/waypoint-examples.git"
+    path = "docker/go"
+  }
+}
+
 app "example-go" {
   labels = {
     "service" = "example-go",
