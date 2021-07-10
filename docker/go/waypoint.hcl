@@ -1,4 +1,4 @@
-project = "example-go"
+leproject = "example-go"
 
 runner {
   enabled = true
@@ -21,7 +21,7 @@ app "example-go" {
 
   deploy {
     use "exec" {
-      command = ["docker", "run", "--publish", "3000:3000", "{{artifact.image}}", "-d"]
+      command = ["docker", "run", "-d", "--publish", "3000:3000", "example-go:latest"]
     }
   }
 }
