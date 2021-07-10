@@ -1,4 +1,4 @@
-leproject = "example-go"
+project = "example-go"
 
 runner {
   enabled = true
