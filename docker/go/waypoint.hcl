@@ -14,6 +14,10 @@ app "example-go" {
     "service" = "example-go",
     "env"     = "dev"
   }
+  
+   url {
+    auto_hostname = false
+  }
 
   build {
     use "pack" {}
