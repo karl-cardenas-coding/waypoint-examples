@@ -24,4 +24,8 @@ app "example-go" {
      service_port = 3000
     }
   }
+  
+    release {
+      use "aws-alb" {}
+   }
 }
