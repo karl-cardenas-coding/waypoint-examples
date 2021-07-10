@@ -20,6 +20,8 @@ app "example-go" {
   }
 
   deploy {
-    use "docker" {}
+    use "docker" {
+     service_port = 3000
+    }
   }
 }
