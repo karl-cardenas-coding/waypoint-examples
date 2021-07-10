@@ -22,6 +22,7 @@ app "example-go" {
   deploy {
     use "docker" {
      service_port = 3000
+     command = ["docker example-go -d-p 3000:3000"]
     }
   }
 }
