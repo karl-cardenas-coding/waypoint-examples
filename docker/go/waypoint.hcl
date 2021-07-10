@@ -22,10 +22,18 @@ app "example-go" {
   build {
     use "pack" {}
   }
-
-  deploy {
-    use "exec" {
-      command = ["docker", "run", "-d", "--publish", "3000:3000", "example-go:latest"]
-    }
+  
+   deploy {
+      use "docker" {
+        service_port = 3000
+      }
   }
+ 
+
+# If you want to use a command do start the docker container
+#   deploy {
+#     use "exec" {
+#       command = ["docker", "run", "-d", "--publish", "3000:3000", "example-go:latest"]
+#     }
+#   }
 }
