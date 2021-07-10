@@ -19,8 +19,9 @@ app "example-go" {
     use "pack" {}
   }
 
-deploy {
-  use "exec" {
-    command = ["docker", "run", "--publish", "3000:3000", "example-go", "-d"]
+  deploy {
+    use "exec" {
+      command = ["docker", "run", "--publish", "3000:3000", "example-go", "-d"]
+    }
   }
 }
