@@ -21,7 +21,7 @@ app "example-go" {
 
   deploy {
     use "exec" {
-      command = ["docker", "run", "--publish", "3000:3000", "example-go", "-d"]
+      command = ["docker", "run", "--publish", "3000:3000", {{artifact.image}}, "-d"]
     }
   }
 }
